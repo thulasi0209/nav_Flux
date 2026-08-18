@@ -1,0 +1,13 @@
+[
+  {"id": "R1", "current_node": "A", "goal_node": "C", "speed": 1.0, "status": "idle", "path": []},
+  {"id": "R2", "current_node": "B", "goal_node": "D", "speed": 1.0, "status": "idle", "path": []},
+  {"id": "R3", "current_node": "C", "goal_node": "A", "speed": 1.0, "status": "idle", "path": []},
+  {"id": "R4", "current_node": "D", "goal_node": "B", "speed": 1.0, "status": "idle", "path": []},
+  {"id": "R5", "current_node": "A", "goal_node": "D", "speed": 1.0, "status": "idle", "path": []},
+  {"id": "R6", "current_node": "C", "goal_node": "B", "speed": 1.0, "status": "idle", "path": []},
+  {"id": "R7", "current_node": "B", "goal_node": "A", "speed": 1.0, "status": "idle", "path": []},
+  {"id": "R8", "current_node": "D", "goal_node": "C", "speed": 1.0, "status": "idle", "path": []},
+  {"id": "R9",  "current_node": "A", "goal_node": "B", "speed": 1.0, "status": "idle", "path": []},
+  {"id": "R10", "current_node": "A", "goal_node": "C", "speed": 1.0, "status": "idle", "path": []}
+]
+

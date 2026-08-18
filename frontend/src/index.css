@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600;700&family=Inter:wght@400;600;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-rajdhani: "Rajdhani", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --color-neon-cyan: #00f2ff;
+  --color-electric-purple: #7000ff;
+  --color-neon-pink: #ff007a;
+  --color-bg-deep: #020617;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-deep text-slate-100 font-inter antialiased overflow-x-hidden;
+    perspective: 1200px;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl;
+  }
+  
+  .glass-cyan {
+    @apply bg-white/5 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-[0_0_20px_rgba(0,242,255,0.1)];
+  }
+
+  .hud-font {
+    @apply font-rajdhani uppercase tracking-widest;
+  }
+}
+
+@keyframes pulse-cyan {
+  0%, 100% { box-shadow: 0 0 10px rgba(0,242,255,0.4); }
+  50% { box-shadow: 0 0 25px rgba(0,242,255,0.8); }
+}
+
+.animate-pulse-cyan {
+  animation: pulse-cyan 2s infinite;
+}

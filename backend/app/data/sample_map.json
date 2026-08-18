@@ -1,0 +1,13 @@
+{
+  "nodes": ["A", "B", "C", "D"],
+  "edges": [
+    {"id": "L1",  "start_node": "A", "end_node": "B", "speed_limit": 1.0, "lane_type": "NORMAL",     "safety_level": "MEDIUM", "congestion_score": 0.0, "usage_count": 0, "is_reserved": false},
+    {"id": "L1R", "start_node": "B", "end_node": "A", "speed_limit": 1.0, "lane_type": "NORMAL",     "safety_level": "MEDIUM", "congestion_score": 0.0, "usage_count": 0, "is_reserved": false},
+    {"id": "L2",  "start_node": "B", "end_node": "C", "speed_limit": 1.0, "lane_type": "NORMAL",     "safety_level": "MEDIUM", "congestion_score": 0.0, "usage_count": 0, "is_reserved": false},
+    {"id": "L2R", "start_node": "C", "end_node": "B", "speed_limit": 1.0, "lane_type": "NORMAL",     "safety_level": "MEDIUM", "congestion_score": 0.0, "usage_count": 0, "is_reserved": false},
+    {"id": "L3",  "start_node": "C", "end_node": "D", "speed_limit": 0.5, "lane_type": "HUMAN_ZONE", "safety_level": "HIGH",   "congestion_score": 0.0, "usage_count": 0, "is_reserved": false},
+    {"id": "L3R", "start_node": "D", "end_node": "C", "speed_limit": 0.5, "lane_type": "HUMAN_ZONE", "safety_level": "HIGH",   "congestion_score": 0.0, "usage_count": 0, "is_reserved": false},
+    {"id": "L4",  "start_node": "D", "end_node": "A", "speed_limit": 1.5, "lane_type": "NORMAL",     "safety_level": "LOW",    "congestion_score": 0.0, "usage_count": 0, "is_reserved": false},
+    {"id": "L4R", "start_node": "A", "end_node": "D", "speed_limit": 1.5, "lane_type": "NORMAL",     "safety_level": "LOW",    "congestion_score": 0.0, "usage_count": 0, "is_reserved": false}
+  ]
+}
