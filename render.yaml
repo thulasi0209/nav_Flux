@@ -1,0 +1,38 @@
+services:
+  # Backend Service
+  - type: web
+    name: robot-traffic-backend
+    runtime: python
+    rootDirectory: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: ALLOWED_ORIGINS
+        fromService:
+          type: web
+          name: robot-traffic-frontend
+          property: host
+      # Optional: set a real secret value here (or in the Render dashboard)
+      # to require X-API-Key on state-mutating routes. Leave unset for open/demo mode.
+      - key: API_KEY
+        sync: false
+
+  # Frontend Service
+  - type: web
+    name: robot-traffic-frontend
+    runtime: static
+    rootDirectory: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: robot-traffic-backend
+          property: host
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
