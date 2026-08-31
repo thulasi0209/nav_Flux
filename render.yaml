@@ -9,11 +9,12 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
+      # Set this in the Render dashboard once the frontend service exists
+      # (e.g. https://robot-traffic-frontend.onrender.com). Left as sync:false
+      # instead of fromService to avoid a circular reference with the
+      # frontend's own fromService pointing back at this service.
       - key: ALLOWED_ORIGINS
-        fromService:
-          type: web
-          name: robot-traffic-frontend
-          property: host
+        sync: false
       # Optional: set a real secret value here (or in the Render dashboard)
       # to require X-API-Key on state-mutating routes. Leave unset for open/demo mode.
       - key: API_KEY
