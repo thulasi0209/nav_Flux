@@ -21,8 +21,9 @@ services:
         sync: false
 
   # Frontend Service
-  - type: static
+  - type: web
     name: robot-traffic-frontend
+    runtime: static
     rootDirectory: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
